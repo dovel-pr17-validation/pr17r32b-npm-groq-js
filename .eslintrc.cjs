@@ -1,0 +1,21 @@
+module.exports = {
+  root: true,
+  env: {node: true, browser: true, jest: true},
+  extends: ['sanity/typescript', 'prettier'],
+  plugins: ['prettier', 'simple-import-sort'],
+  rules: {
+    'callback-return': 'off',
+    'complexity': 'off',
+    'dot-notation': 'off',
+    'max-depth': 'off',
+    'max-nested-callbacks': 'off',
+    'max-statements': 'off',
+    'no-return-await': 'off',
+    'no-shadow': 'off',
+    'no-undef': 'off',
+    'no-unused-vars': 'off',
+    'require-await': 'off',
+    'simple-import-sort/exports': 'warn',
+    'simple-import-sort/imports': 'warn',
+  },
+}

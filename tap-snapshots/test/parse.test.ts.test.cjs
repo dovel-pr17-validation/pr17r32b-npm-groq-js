@@ -1,0 +1,446 @@
+/* IMPORTANT
+ * This snapshot file is auto-generated, but designed for humans.
+ * It should be checked into source control and tracked carefully.
+ * Re-generate by setting TAP_SNAPSHOT=1 and running tests.
+ * Make sure to inspect the output below.  Do not ignore changes!
+ */
+'use strict'
+exports[`test/parse.test.ts TAP Basic parsing Can parse text::semanticSimilarity > must match snapshot 1`] = `
+Object {
+  "base": Object {
+    "base": Object {
+      "args": Array [
+        Object {
+          "args": Array [
+            Object {
+              "type": "Value",
+              "value": "monster",
+            },
+          ],
+          "name": "semanticSimilarity",
+          "namespace": "text",
+          "type": "FuncCall",
+        },
+      ],
+      "base": Object {
+        "base": Object {
+          "type": "Everything",
+        },
+        "expr": Object {
+          "left": Object {
+            "name": "_type",
+            "type": "AccessAttribute",
+          },
+          "op": "==",
+          "right": Object {
+            "type": "Value",
+            "value": "book",
+          },
+          "type": "OpCall",
+        },
+        "type": "Filter",
+      },
+      "name": "score",
+      "type": "PipeFuncCall",
+    },
+    "isInclusive": true,
+    "left": 0,
+    "right": 4,
+    "type": "Slice",
+  },
+  "expr": Object {
+    "base": Object {
+      "type": "This",
+    },
+    "expr": Object {
+      "attributes": Array [
+        Object {
+          "name": "_id",
+          "type": "ObjectAttributeValue",
+          "value": Object {
+            "name": "_id",
+            "type": "AccessAttribute",
+          },
+        },
+        Object {
+          "name": "_score",
+          "type": "ObjectAttributeValue",
+          "value": Object {
+            "name": "_score",
+            "type": "AccessAttribute",
+          },
+        },
+      ],
+      "type": "Object",
+    },
+    "type": "Projection",
+  },
+  "type": "Map",
+}
+`
+
+exports[`test/parse.test.ts TAP Basic parsing Comment with no text > must match snapshot 1`] = `
+Object {
+  "type": "Value",
+  "value": 1,
+}
+`
+
+exports[`test/parse.test.ts TAP Basic parsing Complex query > must match snapshot 1`] = `
+Object {
+  "args": Array [
+    Object {
+      "args": Array [
+        Object {
+          "base": Object {
+            "base": Object {
+              "type": "Everything",
+            },
+            "expr": Object {
+              "left": Object {
+                "name": "_type",
+                "type": "AccessAttribute",
+              },
+              "op": "==",
+              "right": Object {
+                "type": "Value",
+                "value": "page",
+              },
+              "type": "OpCall",
+            },
+            "type": "Filter",
+          },
+          "expr": Object {
+            "base": Object {
+              "base": Object {
+                "type": "This",
+              },
+              "expr": Object {
+                "attributes": Array [
+                  Object {
+                    "name": "_id",
+                    "type": "ObjectAttributeValue",
+                    "value": Object {
+                      "alternatives": Array [
+                        Object {
+                          "condition": Object {
+                            "left": Object {
+                              "name": "_id",
+                              "type": "AccessAttribute",
+                            },
+                            "op": "in",
+                            "right": Object {
+                              "args": Array [
+                                Object {
+                                  "type": "Value",
+                                  "value": "drafts.**",
+                                },
+                              ],
+                              "name": "path",
+                              "namespace": "global",
+                              "type": "FuncCall",
+                            },
+                            "type": "OpCall",
+                          },
+                          "type": "SelectAlternative",
+                          "value": Object {
+                            "name": "_id",
+                            "type": "AccessAttribute",
+                          },
+                        },
+                      ],
+                      "fallback": Object {
+                        "left": Object {
+                          "type": "Value",
+                          "value": "drafts.",
+                        },
+                        "op": "+",
+                        "right": Object {
+                          "name": "_id",
+                          "type": "AccessAttribute",
+                        },
+                        "type": "OpCall",
+                      },
+                      "type": "Select",
+                    },
+                  },
+                ],
+                "type": "Object",
+              },
+              "type": "Projection",
+            },
+            "name": "_id",
+            "type": "AccessAttribute",
+          },
+          "type": "Map",
+        },
+      ],
+      "name": "unique",
+      "namespace": "array",
+      "type": "FuncCall",
+    },
+  ],
+  "name": "count",
+  "namespace": "global",
+  "type": "FuncCall",
+}
+`
+
+exports[`test/parse.test.ts TAP Basic parsing Example query > must match snapshot 1`] = `
+Object {
+  "base": Object {
+    "base": Object {
+      "type": "Everything",
+    },
+    "expr": Object {
+      "left": Object {
+        "name": "_type",
+        "type": "AccessAttribute",
+      },
+      "op": "==",
+      "right": Object {
+        "type": "Value",
+        "value": "product",
+      },
+      "type": "OpCall",
+    },
+    "type": "Filter",
+  },
+  "expr": Object {
+    "base": Object {
+      "type": "This",
+    },
+    "expr": Object {
+      "attributes": Array [
+        Object {
+          "name": "name",
+          "type": "ObjectAttributeValue",
+          "value": Object {
+            "name": "name",
+            "type": "AccessAttribute",
+          },
+        },
+      ],
+      "type": "Object",
+    },
+    "type": "Projection",
+  },
+  "type": "Map",
+}
+`
+
+exports[`test/parse.test.ts TAP Basic parsing Object expression starting with string > must match snapshot 1`] = `
+Object {
+  "attributes": Array [
+    Object {
+      "condition": Object {
+        "left": Object {
+          "type": "Value",
+          "value": "mail",
+        },
+        "op": "==",
+        "right": Object {
+          "type": "Value",
+          "value": 1,
+        },
+        "type": "OpCall",
+      },
+      "type": "ObjectConditionalSplat",
+      "value": Object {
+        "attributes": Array [],
+        "type": "Object",
+      },
+    },
+  ],
+  "type": "Object",
+}
+`
+
+exports[`test/parse.test.ts TAP Basic parsing Space after field in objects > must match snapshot 1`] = `
+Object {
+  "attributes": Array [
+    Object {
+      "name": "mail",
+      "type": "ObjectAttributeValue",
+      "value": Object {
+        "type": "Value",
+        "value": 123,
+      },
+    },
+  ],
+  "type": "Object",
+}
+`
+
+exports[`test/parse.test.ts TAP Basic parsing Trailing comma in function call > must match snapshot 1`] = `
+Object {
+  "alternatives": Array [],
+  "fallback": Object {
+    "type": "Value",
+    "value": 123,
+  },
+  "type": "Select",
+}
+`
+
+exports[`test/parse.test.ts TAP Custom functions can parse > must match snapshot 1`] = `
+Object {
+  "base": Object {
+    "base": Object {
+      "type": "Everything",
+    },
+    "expr": Object {
+      "left": Object {
+        "name": "_type",
+        "type": "AccessAttribute",
+      },
+      "op": "==",
+      "right": Object {
+        "type": "Value",
+        "value": "person",
+      },
+      "type": "OpCall",
+    },
+    "type": "Filter",
+  },
+  "expr": Object {
+    "base": Object {
+      "type": "This",
+    },
+    "expr": Object {
+      "attributes": Array [
+        Object {
+          "name": "info",
+          "type": "ObjectAttributeValue",
+          "value": Object {
+            "base": Object {
+              "type": "This",
+            },
+            "expr": Object {
+              "attributes": Array [
+                Object {
+                  "name": "name",
+                  "type": "ObjectAttributeValue",
+                  "value": Object {
+                    "name": "name",
+                    "type": "AccessAttribute",
+                  },
+                },
+                Object {
+                  "name": "names",
+                  "type": "ObjectAttributeValue",
+                  "value": Object {
+                    "base": Object {
+                      "base": Object {
+                        "name": "name",
+                        "type": "AccessAttribute",
+                      },
+                      "type": "ArrayCoerce",
+                    },
+                    "expr": Object {
+                      "base": Object {
+                        "type": "This",
+                      },
+                      "expr": Object {
+                        "attributes": Array [
+                          Object {
+                            "name": "first",
+                            "type": "ObjectAttributeValue",
+                            "value": Object {
+                              "name": "first",
+                              "type": "AccessAttribute",
+                            },
+                          },
+                          Object {
+                            "name": "last",
+                            "type": "ObjectAttributeValue",
+                            "value": Object {
+                              "name": "last",
+                              "type": "AccessAttribute",
+                            },
+                          },
+                        ],
+                        "type": "Object",
+                      },
+                      "type": "Projection",
+                    },
+                    "type": "Map",
+                  },
+                },
+                Object {
+                  "name": "age",
+                  "type": "ObjectAttributeValue",
+                  "value": Object {
+                    "name": "age",
+                    "type": "AccessAttribute",
+                  },
+                },
+                Object {
+                  "name": "myparam",
+                  "type": "ObjectAttributeValue",
+                  "value": Object {
+                    "type": "Value",
+                    "value": "hello",
+                  },
+                },
+                Object {
+                  "name": "undefinedParam",
+                  "type": "ObjectAttributeValue",
+                  "value": Object {
+                    "name": "undefinedParam",
+                    "type": "Parameter",
+                  },
+                },
+              ],
+              "type": "Object",
+            },
+            "type": "Projection",
+          },
+        },
+        Object {
+          "name": "undefinedParam",
+          "type": "ObjectAttributeValue",
+          "value": Object {
+            "name": "undefinedParam",
+            "type": "Parameter",
+          },
+        },
+      ],
+      "type": "Object",
+    },
+    "type": "Projection",
+  },
+  "type": "Map",
+}
+`
+
+exports[`test/parse.test.ts TAP Expression parsing when extracting property keys can extract from group > must match snapshot 1`] = `
+Object {
+  "base": Object {
+    "type": "Everything",
+  },
+  "expr": Object {
+    "base": Object {
+      "type": "This",
+    },
+    "expr": Object {
+      "attributes": Array [
+        Object {
+          "name": "id",
+          "type": "ObjectAttributeValue",
+          "value": Object {
+            "base": Object {
+              "name": "id",
+              "type": "AccessAttribute",
+            },
+            "type": "Group",
+          },
+        },
+      ],
+      "type": "Object",
+    },
+    "type": "Projection",
+  },
+  "type": "Map",
+}
+`
