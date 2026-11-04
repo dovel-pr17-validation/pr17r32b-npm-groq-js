@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@sanity/prettier-config": "^3.0.0",
-    "@sanity/semantic-release-preset": "^5.0.0",
+    "@sanity/semantic-release-preset": "^6.0.0",
     "@sanity/tsconfig": "^2.2.1",
     "@sanity/tsdown-config": "^0.19.6",
     "@types/tap": "^15.0.12",
@@ -67,7 +67,7 @@
     "ndjson": "^2.0.0",
     "pkg-pr-new": "^0.0.75",
     "prettier": "^3.8.1",
-    "semantic-release": "^24.2.0",
+    "semantic-release": "^25.0.9",
     "semver": "^7.5.4",
     "tap": "^16.3.10",
     "tsdown": "^0.22.13",
